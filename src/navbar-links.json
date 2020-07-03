@@ -1,0 +1,22 @@
+{
+  "startLinks": [
+    {
+      "name": "Roster",
+      "href": "/"
+    },
+    {
+      "name": "Mythic+",
+      "href": "/"
+    }
+  ],
+  "endLinks": [
+    {
+      "name": "Warcraft Logs",
+      "href": "https://www.warcraftlogs.com/guild/id/498236"
+    },
+    {
+      "name": "Apply Now",
+      "href": "http://localhost:3000/https://docs.google.com/forms/d/e/1FAIpQLSdAHwVHJ4Wj3uOOAIsiWYNSZ41X3lEfnVWes5XVjC4aM6wvoA/viewform"
+    }
+  ]
+}

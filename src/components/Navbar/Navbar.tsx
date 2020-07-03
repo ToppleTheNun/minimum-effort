@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import minimumEffortLogo from "../../assets/minimum-effort-logo.png";
+import navbarLinks from "../../navbar-links.json";
 
 const Navbar: React.FC = () => (
   <nav
@@ -9,14 +11,14 @@ const Navbar: React.FC = () => (
     aria-label="main navigation"
   >
     <div className="navbar-brand">
-      <a className="navbar-item" href="https://bulma.io">
+      <Link className="navbar-item" to="/">
         <img
           src={minimumEffortLogo}
           alt="Minimum Effort: Semi-Hardcore Raiding Guild on Thrall"
           width="112"
           height="28"
         />
-      </a>
+      </Link>
 
       <button
         type="button"
@@ -32,18 +34,26 @@ const Navbar: React.FC = () => (
 
     <div id="navbar-menu" className="navbar-menu">
       <div className="navbar-start">
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a className="navbar-item">Roster</a>
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a className="navbar-item">Mythic+</a>
+        {navbarLinks.startLinks.map((startLink) => (
+          <Link
+            key={`${startLink.name}${startLink.href}`}
+            className="navbar-item"
+            to={startLink.href}
+          >
+            {startLink.name}
+          </Link>
+        ))}
       </div>
       <div className="navbar-end">
-        <a
-          className="navbar-item"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdAHwVHJ4Wj3uOOAIsiWYNSZ41X3lEfnVWes5XVjC4aM6wvoA/viewform"
-        >
-          Apply Now
-        </a>
+        {navbarLinks.endLinks.map((endLink) => (
+          <Link
+            key={`${endLink.name}${endLink.href}`}
+            className="navbar-item"
+            to={endLink.href}
+          >
+            {endLink.name}
+          </Link>
+        ))}
       </div>
     </div>
   </nav>
