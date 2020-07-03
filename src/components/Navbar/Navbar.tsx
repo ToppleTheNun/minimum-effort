@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import classNames from "classnames";
 
 import minimumEffortLogo from "../../assets/minimum-effort-logo.png";
-import navbarLinks from "../../navbar-links.json";
+import navbarLinksJson from "../../navbar-links.json";
+import { NavbarLinksJson } from "../../types";
+import NavbarLink from "./NavbarLink";
+
+const navbarLinks: NavbarLinksJson = navbarLinksJson;
 
 const Navbar: React.FC = () => {
   const [isHamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
@@ -50,24 +54,15 @@ const Navbar: React.FC = () => {
       >
         <div className="navbar-start">
           {navbarLinks.startLinks.map((startLink) => (
-            <Link
+            <NavbarLink
               key={`${startLink.name}${startLink.href}`}
-              className="navbar-item"
-              to={startLink.href}
-            >
-              {startLink.name}
-            </Link>
+              link={startLink}
+            />
           ))}
         </div>
         <div className="navbar-end">
           {navbarLinks.endLinks.map((endLink) => (
-            <Link
-              key={`${endLink.name}${endLink.href}`}
-              className="navbar-item"
-              to={endLink.href}
-            >
-              {endLink.name}
-            </Link>
+            <NavbarLink key={`${endLink.name}${endLink.href}`} link={endLink} />
           ))}
         </div>
       </div>

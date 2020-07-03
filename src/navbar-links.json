@@ -1,14 +1,5 @@
 {
-  "startLinks": [
-    {
-      "name": "Roster",
-      "href": "/"
-    },
-    {
-      "name": "Mythic+",
-      "href": "/"
-    }
-  ],
+  "startLinks": [],
   "endLinks": [
     {
       "name": "Warcraft Logs",
