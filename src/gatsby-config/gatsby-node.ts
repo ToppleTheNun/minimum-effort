@@ -14,7 +14,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
   createPage({
     path: "/",
-    component: resolve(__dirname, "..", "src", "templates", "home.tsx"),
+    component: resolve(__dirname, "..", "templates", "home.tsx"),
     context: { guildProfileResponse: guildProfile },
   });
 };

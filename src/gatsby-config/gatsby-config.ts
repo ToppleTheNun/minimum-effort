@@ -12,7 +12,7 @@ export const plugins = [
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `images`,
-      path: `${resolve(__dirname, "..")}/src/images`,
+      path: `${resolve(__dirname, "..")}/images`,
     },
   },
   `gatsby-transformer-sharp`,
