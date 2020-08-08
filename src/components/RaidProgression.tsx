@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { RaiderIoRaidProgression } from "../types";
+import { RaiderIoRaidProgression } from "../types/raiderIO";
 import RaidProgressCard from "./RaidProgressCard";
 
 type RaidProgressionProps = {
@@ -20,7 +20,7 @@ const RaidProgression: React.FC<RaidProgressionProps> = ({
   );
 
   return (
-    <section className="section">
+    <section className="horde-gradient-background section">
       <div className="container">
         <div className="columns">
           {availableRaids.map((raid) => (

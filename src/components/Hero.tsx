@@ -1,7 +1,7 @@
 import React from "react";
 
 const Hero: React.FC = () => (
-  <section className="hero is-primary is-bold is-fullheight-with-navbar">
+  <section className="hero is-fullheight nzoth-background">
     <div className="hero-body">
       <div className="container">
         <h1 className="title">Minimum Effort</h1>

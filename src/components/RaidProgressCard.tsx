@@ -1,6 +1,6 @@
 import React from "react";
 
-import { RaiderIoRaidProgress } from "../types";
+import { RaiderIoRaidProgress } from "../types/raiderIO";
 
 type RaidProgressCardProps = {
   raidProgress: RaiderIoRaidProgress;

@@ -1,12 +1,3 @@
-export type NavbarLinkJson = {
-  name: string;
-  href: string;
-};
-export type NavbarLinksJson = {
-  startLinks: NavbarLinkJson[];
-  endLinks: NavbarLinkJson[];
-};
-
 export type RaiderIoRaidProgress = {
   summary: string;
   total_bosses: number;
