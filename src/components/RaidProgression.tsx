@@ -8,7 +8,7 @@ type RaidProgressionProps = {
 
 const raids = [
   { slug: "the-eternal-palace", title: "The Eternal Palace" },
-  { slug: "nyalotha-the-waking-city", title: "Nya'lotha the Waking City" },
+  { slug: "nyalotha-the-waking-city", title: "Nya'lotha" },
 ];
 
 const RaidProgression: React.FC<RaidProgressionProps> = ({
