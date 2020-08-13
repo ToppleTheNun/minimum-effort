@@ -17,9 +17,12 @@
     "*.{ts,tsx}": "eslint --cache --fix"
   },
   "dependencies": {
+    "@types/classnames": "^2.2.10",
     "bulma": "0.9.0",
     "classnames": "^2.2.6",
+    "client-oauth2": "^4.3.3",
     "next": "9.5.1",
+    "node-cache": "^5.1.2",
     "node-sass": "^4.14.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",

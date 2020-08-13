@@ -20,8 +20,9 @@ const RaidProgression: React.FC<RaidProgressionProps> = ({
   );
 
   return (
-    <section className="horde-gradient-background section">
+    <section className="section">
       <div className="container">
+        <h1 className="title text-white">Raid Progression</h1>
         <div className="columns">
           {availableRaids.map((raid) => (
             <div className="column" key={raid.slug}>

@@ -5,21 +5,17 @@ $almond: #dcccbbff;
 $sunray: #eab464ff;
 
 $primary: $ou-crimson-red;
+$darker-primary: darken(saturate(adjust-hue($primary, -10deg), 10%), 10%);
+$dark-primary: darken(saturate(adjust-hue($primary, -10deg), 5%), 5%);
+$light-primary: lighten(saturate(adjust-hue($primary, 10deg), 2%), 2%);
 
 @import "../../node_modules/bulma";
 
+$half-alpha-grey-darker: rgba($grey-darker, 0.5);
+$half-alpha-grey-dark: rgba($grey-dark, 0.1);
+
 .horde-gradient-background {
-  background-image: linear-gradient(141deg, darken(saturate(adjust-hue($primary, -10deg), 10%), 10%) 0%, $primary 71%, lighten(saturate(adjust-hue($primary, 10deg), 5%), 5%) 100%);
-
-  .hero {
-    .subtitle {
-      color: $white;
-    }
-
-    .title {
-      color: $white;
-    }
-  }
+  background: $grey-darker;
 }
 
 .nzoth-background {
@@ -27,13 +23,100 @@ $primary: $ou-crimson-red;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  background-image: url("/906611-nzoth-the-corruptor.jpg");
+  background-image: radial-gradient($half-alpha-grey-darker, $half-alpha-grey-dark), url("/906611-nzoth-the-corruptor.jpg");
+}
 
-  .subtitle {
-    color: $white;
+div.roster-tabs {
+  ul {
+    border-bottom-width: 0;
   }
 
-  .title {
+  li.is-active {
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $white;
+    }
+
     color: $white;
   }
+}
+
+.roster-level {
+  font-size: 1.5rem;
+  padding: 0.5em 1em;
+}
+
+// stupid specificity
+.text-white.text-white.text-white {
+  color: $white;
+}
+
+.wow-class-shadow {
+  // empty for now I guess
+}
+
+// Warrior
+.wow-class-1 {
+  color: #c79c6e;
+}
+
+// Paladin
+.wow-class-2 {
+  color: #f58cba;
+}
+
+// Hunter
+.wow-class-3 {
+  color: #a9d271;
+}
+
+// Rogue
+.wow-class-4 {
+  color: #fff569;
+}
+
+// Priest
+.wow-class-5 {
+  color: #ffffff;
+}
+
+// Death Knight
+.wow-class-6 {
+  color: #c41f3b;
+}
+
+// Shaman
+.wow-class-7 {
+  color: #0070de;
+}
+
+// Mage
+.wow-class-8 {
+  color: #40c7eb;
+}
+
+// Warlock
+.wow-class-9 {
+  color: #8787ed;
+}
+
+// Monk
+.wow-class-10 {
+  color: #00ff96;
+}
+
+// Druid
+.wow-class-11 {
+  color: #ff7d0a;
+}
+
+// Demon Hunter
+.wow-class-12 {
+  color: #a330c9;
 }

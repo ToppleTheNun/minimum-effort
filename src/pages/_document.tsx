@@ -52,7 +52,7 @@ class MinimumEffortDocument extends Document {
           />
           <title>Minimum Effort</title>
         </Head>
-        <body className="app-background">
+        <body className="horde-gradient-background">
           <Main />
           <NextScript />
         </body>
