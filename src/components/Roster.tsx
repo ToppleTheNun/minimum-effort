@@ -3,6 +3,7 @@ import classNames from "classnames";
 
 import { RosterByRole } from "../types/blizzard";
 import RosterCharacter from "./RosterCharacter";
+import RosterCharacters from "./RosterCharacters";
 
 type RosterProps = {
   members: RosterByRole;
@@ -47,18 +48,18 @@ const Roster: React.FC<RosterProps> = ({ members }) => {
           </ul>
         </div>
         <div>
-          {activeTab === "tank" &&
-            members.tank.map((member) => (
-              <RosterCharacter character={member} key={member.id} />
-            ))}
-          {activeTab === "healer" &&
-            members.healer.map((member) => (
-              <RosterCharacter character={member} key={member.id} />
-            ))}
-          {activeTab === "damage" &&
-            members.damage.map((member) => (
-              <RosterCharacter character={member} key={member.id} />
-            ))}
+          {activeTab === "tank" && <RosterCharacters members={members.tank} />}
+          {activeTab === "healer" && (
+            <RosterCharacters members={members.healer} />
+          )}
+          {activeTab === "damage" && (
+            <>
+              <RosterCharacters members={members.damage} />
+              <p className="roster-padding wow-class-3">
+                * = not a guaranteed raid spot in Shadowlands
+              </p>
+            </>
+          )}
         </div>
       </div>
     </section>

@@ -34,16 +34,6 @@ const RaidProgressCard: React.FC<RaidProgressCardProps> = ({
       >
         {raidProgress.heroic_bosses_killed}/{raidProgress.total_bosses}
       </progress>
-      <p className="subtitle">
-        Normal - {raidProgress.normal_bosses_killed}/{raidProgress.total_bosses}
-      </p>
-      <progress
-        className="progress"
-        value={raidProgress.normal_bosses_killed}
-        max={raidProgress.total_bosses}
-      >
-        {raidProgress.normal_bosses_killed}/{raidProgress.total_bosses}
-      </progress>
     </div>
   </div>
 );

@@ -1,7 +1,6 @@
 export type RaiderIoRaidProgress = {
   summary: string;
   total_bosses: number;
-  normal_bosses_killed: number;
   heroic_bosses_killed: number;
   mythic_bosses_killed: number;
 };

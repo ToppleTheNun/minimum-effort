@@ -51,11 +51,20 @@ getAllSpecs().catch((reason) => {
   console.error(reason);
 });
 
+const mapLyondName = (name: string) =>
+  name === "Lyondyspair" ? "Lyondyspair *" : name;
+
 const getFilteredGuildMembers = async () => {
   const guildResponse = await getGuildRoster();
-  return guildResponse.members.filter((member) =>
-    [5, 4, 2, 0].includes(member.rank)
-  );
+  return guildResponse.members
+    .filter((member) => [5, 4, 2, 0].includes(member.rank))
+    .map((member) => ({
+      ...member,
+      character: {
+        ...member.character,
+        name: mapLyondName(member.character.name),
+      },
+    }));
 };
 
 const getCharacterAndSpec = async () => {
