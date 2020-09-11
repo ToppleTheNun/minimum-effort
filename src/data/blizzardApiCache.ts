@@ -18,6 +18,8 @@ const secondsToCache = secondsInMinute * minutesInHour * hoursToCache;
 
 const playerSpecializationCache = new Cache(secondsToCache);
 
+const charactersWithAsterisks = ["Lyondyspair", "Meldot"];
+
 export const getCharacterSpecializationIndex = (): Promise<
   CharacterSpecializationIndexResponse
 > => {
@@ -51,8 +53,8 @@ getAllSpecs().catch((reason) => {
   console.error(reason);
 });
 
-const mapLyondName = (name: string) =>
-  name === "Lyondyspair" ? "Lyondyspair *" : name;
+const mapAsteriskName = (name: string) =>
+  charactersWithAsterisks.includes(name) ? `${name} *` : name;
 
 const getFilteredGuildMembers = async () => {
   const guildResponse = await getGuildRoster();
@@ -62,7 +64,7 @@ const getFilteredGuildMembers = async () => {
       ...member,
       character: {
         ...member.character,
-        name: mapLyondName(member.character.name),
+        name: mapAsteriskName(member.character.name),
       },
     }));
 };
