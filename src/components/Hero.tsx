@@ -13,7 +13,7 @@ const Hero: React.FC = () => (
         </h2>
         <a
           className="button is-inverted is-large is-outlined is-primary"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSccN2RsqWGMNWG8mKunlsf0x-cS8aZQupGktD9m8f89UAE_aQ/viewform"
+          href="https://forms.gle/sRnhWeyeqtn4VLB48"
         >
           Apply Now
         </a>
