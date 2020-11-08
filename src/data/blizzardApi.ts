@@ -1,13 +1,14 @@
 import ClientOAuth2 from "client-oauth2";
+
+import {
+  CharacterSpecializationIndexResponse,
+  PlayableSpecializationResponse,
+} from "../types/blizzardGameDataApi";
 import {
   CharacterProfileResponse,
   GuildCharacter,
   GuildResponse,
 } from "../types/blizzardProfileApi";
-import {
-  CharacterSpecializationIndexResponse,
-  PlayableSpecializationResponse,
-} from "../types/blizzardGameDataApi";
 
 const blizzardAuth = new ClientOAuth2({
   clientId: process.env.BLIZZARD_OAUTH_CLIENT_ID,

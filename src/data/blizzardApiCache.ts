@@ -1,4 +1,5 @@
 import Cache from "../services/cache";
+import { CharacterWithSpec, RosterByRole } from "../types/blizzard";
 import {
   CharacterSpecializationIndexResponse,
   PlayableSpecializationResponse,
@@ -9,7 +10,6 @@ import {
   getGuildRoster,
   getPlayableSpecializationResponse,
 } from "./blizzardApi";
-import { CharacterWithSpec, RosterByRole } from "../types/blizzard";
 
 const secondsInMinute = 60;
 const minutesInHour = 60;

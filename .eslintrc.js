@@ -1,47 +1,54 @@
 module.exports = {
-  overrides: [
-    {
-      files: ["*.ts", "*.tsx"],
-      extends: [
-        "airbnb-typescript",
-        "airbnb/hooks",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:jest/recommended",
-        "prettier",
-        "prettier/react",
-        "prettier/@typescript-eslint",
-        "plugin:prettier/recommended",
-      ],
-      plugins: ["react", "@typescript-eslint", "jest"],
-      env: {
-        browser: true,
-        es6: true,
-        jest: true,
-      },
-      globals: {
-        Atomics: "readonly",
-        SharedArrayBuffer: "readonly",
-      },
-      parser: "@typescript-eslint/parser",
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-        ecmaVersion: 2018,
-        sourceType: "module",
-        project: "./tsconfig.json",
-      },
-      rules: {
-        "linebreak-style": "off",
-        "prettier/prettier": [
-          "error",
-          {
-            endOfLine: "auto",
-          },
-        ],
-        "react/prop-types": "off",
-        "react/jsx-props-no-spreading": "off"
-      },
-    },
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended", // always last
   ],
+  plugins: ["simple-import-sort"],
+  env: {
+    browser: true,
+    es6: true,
+    jest: true,
+    node: true,
+  },
+  globals: {
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
+  },
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2018,
+    sourceType: "module",
+  },
+  rules: {
+    "linebreak-style": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
+    "react/prop-types": "off",
+    "simple-import-sort/sort": "error",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        components: ["Link"],
+        specialLink: ["hrefLeft", "hrefRight"],
+        aspects: ["invalidHref", "preferButton"],
+      },
+    ],
+  },
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
 };

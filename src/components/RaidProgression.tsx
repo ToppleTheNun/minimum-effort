@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+
 import { RaiderIoRaidProgression } from "../types/raiderIO";
 import RaidProgressCard from "./RaidProgressCard";
 

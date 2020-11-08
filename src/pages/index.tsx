@@ -1,12 +1,12 @@
-import React from "react";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
+import React from "react";
 
 import Hero from "../components/Hero";
 import RaidProgression from "../components/RaidProgression";
-import { RaiderIoGuildProfileResponse } from "../types/raiderIO";
 import Roster from "../components/Roster";
-import { RosterByRole } from "../types/blizzard";
 import { getCharacterAndSpecGroupedBy } from "../data/blizzardApiCache";
+import { RosterByRole } from "../types/blizzard";
+import { RaiderIoGuildProfileResponse } from "../types/raiderIO";
 
 export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch(

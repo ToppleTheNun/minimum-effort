@@ -1,4 +1,5 @@
 import React from "react";
+
 import { CharacterWithSpec } from "../types/blizzard";
 
 type RosterCharacter = {
