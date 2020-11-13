@@ -9,7 +9,7 @@ const Hero: React.FC = () => (
           Semi-Hardcore Raiding Guild on Thrall (Horde)
         </h2>
         <h2 className="subtitle text-white">
-          Tuesday and Thursday from 8-11PM EST
+          Tuesday, Wednesday, and Thursday from 8-11PM EST
         </h2>
         <a
           className="button is-inverted is-large is-outlined is-primary"
