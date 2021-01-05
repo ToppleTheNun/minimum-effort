@@ -8,7 +8,6 @@ module.exports = {
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended", // always last
   ],
-  plugins: ["simple-import-sort"],
   env: {
     browser: true,
     es6: true,
@@ -36,7 +35,6 @@ module.exports = {
       },
     ],
     "react/prop-types": "off",
-    "simple-import-sort/sort": "error",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
