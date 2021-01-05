@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 
 import { RaiderIoRaidProgression } from "../types/raiderIO";
-import RaidProgressCard from "./RaidProgressCard";
 
 type RaidProgressionProps = {
   raidProgression: RaiderIoRaidProgression;
@@ -18,21 +17,13 @@ const RaidProgression: React.FC<RaidProgressionProps> = ({
   );
 
   return (
-    <section className="section">
-      <div className="container">
-        <h1 className="title text-white">Raid Progression</h1>
-        <div className="columns">
-          {availableRaids.map((raid) => (
-            <div className="column" key={raid.slug}>
-              <RaidProgressCard
-                raidProgress={raidProgression[raid.slug]}
-                raidTitle={raid.title}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <>
+      {availableRaids.map((raid) => (
+        <h2 className="subtitle text-white" key={raid.slug}>
+          {raid.title} - {raidProgression[raid.slug].summary}
+        </h2>
+      ))}
+    </>
   );
 };
 
