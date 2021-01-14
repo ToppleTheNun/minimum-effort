@@ -1,5 +1,5 @@
-import { GetStaticProps, InferGetStaticPropsType } from "next";
 import React from "react";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 
 import Hero from "../components/Hero";
 import { RaiderIoGuildProfileResponse } from "../types/raiderIO";
@@ -14,7 +14,10 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       guildProfileResponse: raiderIoGuildProfileResponse,
     },
-    revalidate: 300, // number of seconds between polls
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every second
+    revalidate: 1, // In seconds
   };
 };
 

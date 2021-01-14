@@ -1,5 +1,7 @@
-import React, { useMemo } from "react";
+import React from "react";
 
+import useSWR from "swr";
+import { fetchGuildProgression } from "../api/raiderIO";
 import { RaiderIoRaidProgression } from "../types/raiderIO";
 
 type RaidProgressionProps = {
@@ -11,16 +13,15 @@ const raids = [{ slug: "castle-nathria", title: "Castle Nathria" }];
 const RaidProgression: React.FC<RaidProgressionProps> = ({
   raidProgression,
 }) => {
-  const availableRaids = useMemo(
-    () => raids.filter((raid) => raidProgression[raid.slug]),
-    [raidProgression]
-  );
+  const { data } = useSWR("/v1/guilds/profile", fetchGuildProgression, {
+    initialData: raidProgression,
+  });
 
   return (
     <>
-      {availableRaids.map((raid) => (
+      {raids.map((raid) => (
         <h2 className="subtitle text-white" key={raid.slug}>
-          {raid.title} - {raidProgression[raid.slug].summary}
+          {raid.title} - {data[raid.slug].summary}
         </h2>
       ))}
     </>
