@@ -20,7 +20,10 @@ const RaidProgression: React.FC<RaidProgressionProps> = ({
   return (
     <>
       {raids.map((raid) => (
-        <h2 className="subtitle text-white" key={raid.slug}>
+        <h2
+          className="mb-3 text-xl text-base font-medium leading-relaxed sm:text-2xl"
+          key={raid.slug}
+        >
           {raid.title} - {data[raid.slug].summary}
         </h2>
       ))}

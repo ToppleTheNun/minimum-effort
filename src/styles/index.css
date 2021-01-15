@@ -1,0 +1,27 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Write your own custom component styles here */
+
+.nathria-background {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-image: radial-gradient(
+      rgba(54, 54, 54, 0.5),
+      rgba(74, 74, 74, 0.1)
+    ),
+    url("/castle-nathria.jpg");
+}
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
