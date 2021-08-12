@@ -8,7 +8,7 @@
 
 /* Write your own custom component styles here */
 
-.nathria-background {
+.raid-background {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -17,7 +17,7 @@
       rgba(54, 54, 54, 0.5),
       rgba(74, 74, 74, 0.1)
     ),
-    url("/castle-nathria.jpg");
+    url("/sanctum.jpg");
 }
 
 /* Start purging... */

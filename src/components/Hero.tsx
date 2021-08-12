@@ -7,7 +7,7 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ raidProgression }) => (
-  <section className="body-font h-screen nathria-background text-white w-screen">
+  <section className="body-font h-screen raid-background text-white w-screen">
     <div className="container px-8 m-auto lg:px-4 h-full w-full">
       <div className="flex flex-col h-full w-full justify-center text-left">
         <h1 className="mb-1 text-2xl font-semibold tracking-tighter sm:text-6xl title-font">
@@ -17,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({ raidProgression }) => (
           Thrall (Horde)
         </h2>
         <h2 className="mb-3 text-xl text-base font-medium leading-relaxed sm:text-2xl">
-          Tuesday, Wednesday, and Thursday from 8-11PM EST
+          Wednesday from 8-11PM EST
         </h2>
         <RaidProgression raidProgression={raidProgression} />
         <a

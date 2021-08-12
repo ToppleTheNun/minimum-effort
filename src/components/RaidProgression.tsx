@@ -8,7 +8,9 @@ type RaidProgressionProps = {
   raidProgression: RaiderIoRaidProgression;
 };
 
-const raids = [{ slug: "castle-nathria", title: "Castle Nathria" }];
+const raids = [
+  { slug: "sanctum-of-domination", title: "Sanctum of Domination" },
+];
 
 const RaidProgression: React.FC<RaidProgressionProps> = ({
   raidProgression,
